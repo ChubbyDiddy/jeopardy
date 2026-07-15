@@ -6,7 +6,7 @@ A modern recreation of the classic **Jeopardy!** trivia game built with **HTML, 
 
 ## 📸 Preview
 
-> *Add a screenshot or GIF of your game here after deployment.*
+
 
 ---
 
