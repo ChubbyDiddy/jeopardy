@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy 2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  </head>
+  <body>
+    <section id="start-screen" class="start-screen" aria-labelledby="game-title">
+      <div class="title-card">
+        <p class="eyebrow">Welcome to</p>
+        <h1 id="game-title">Jeopardy!</h1>
+        <p class="subtitle">Add your players, enter their names, then start the game.</p>
+
+        <div id="player-setup" class="player-setup" aria-label="Player setup"></div>
+
+        <div class="setup-actions">
+          <button id="add-player" type="button">+ Add Player</button>
+          <button id="play" type="button">Start the Game!</button>
+        </div>
+        <p id="player-setup-error" class="player-setup-error" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="game-screen" class="game-screen disabled" aria-label="Jeopardy game">
+      <header class="game-header">
+        <h2>Jeopardy!</h2>
+        <button id="restart" type="button">Restart Game</button>
+      </header>
+
+      <section id="scoreboard" aria-label="Scoreboard"></section>
+
+      <main aria-label="Jeopardy game board">
+        <div class="board-wrap">
+          <table>
+            <thead>
+              <tr id="categories"></tr>
+            </thead>
+            <tbody>
+              <tr id="clues"></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="active-clue" role="button" tabindex="0" aria-live="polite">
+          Choose a dollar amount to begin.
+        </div>
+
+        <section id="answer-controls" class="answer-controls disabled" aria-label="Scoring controls">
+          <p>Choose who answered the clue:</p>
+          <div id="answer-buttons"></div>
+          <button id="nobody-correct" type="button">Nobody Correct</button>
+        </section>
+      </main>
+    </section>
+
+
+    <div id="daily-double-overlay" class="daily-double-overlay disabled" role="dialog" aria-modal="true" aria-labelledby="daily-double-title">
+      <div class="daily-double-card">
+        <p class="daily-double-stars">★ ★ ★ ★ ★</p>
+        <h2 id="daily-double-title">Daily Double!</h2>
+        <p class="daily-double-copy">Enter your wager, then reveal the clue.</p>
+
+        <label for="daily-double-wager">Your Wager</label>
+        <div class="wager-input-wrap">
+          <span>$</span>
+          <input id="daily-double-wager" type="number" min="0" step="100" inputmode="numeric">
+        </div>
+
+        <p id="daily-double-limit" class="daily-double-limit"></p>
+        <p id="daily-double-error" class="daily-double-error" aria-live="polite"></p>
+        <button id="reveal-daily-double" type="button">Reveal Question</button>
+      </div>
+    </div>
+
+    <div id="spinner" class="disabled" aria-label="Loading game">
+      <i class="fa fa-spin fa-spinner" aria-hidden="true"></i>
+      <p>Loading the board...</p>
+    </div>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/lodash"></script>
+    <script src="jeopardy.js"></script>
+  </body>
+</html>
