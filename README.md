@@ -7,6 +7,9 @@ A modern recreation of the classic **Jeopardy!** trivia game built with **HTML, 
 ## 📸 Preview
 
 
+<img width="1524" height="1023" alt="Screenshot 2026-07-15 165904" src="https://github.com/user-attachments/assets/57839bb5-b4dc-47d1-8b4c-52981b5d7510" />
+<img width="986" height="735" alt="Screenshot 2026-07-15 165839" src="https://github.com/user-attachments/assets/eff457d9-2058-457e-ba91-973c58b82208" />
+
 
 ---
 
